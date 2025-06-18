@@ -3,3 +3,6 @@ uvicorn
 python-multipart
 pillow
 google-generativeai
+pydantic
+numpy
+mangum
