@@ -22,7 +22,7 @@ def get_embedding(text):
     return response["embedding"]
 
 # Load scraped data
-with open("scraped_data.json", "r", encoding="utf-8") as f:
+with open("scraped_data1.json", "r", encoding="utf-8") as f:
     scraped_data = json.load(f)
 
 embeddings = []
@@ -45,7 +45,7 @@ for topic in scraped_data:
             print(f"❌ Failed to embed: {link.get('url', 'unknown')} – {e}")
 
 # Save embeddings to JSON
-with open("scraped_embeddings.json", "w", encoding="utf-8") as f:
+with open("scraped_embeddings1.json", "w", encoding="utf-8") as f:
     json.dump(embeddings, f, indent=2)
 
 print("✅ Embeddings saved to 'scraped_embeddings.json'.")
